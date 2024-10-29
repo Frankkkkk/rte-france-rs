@@ -1,0 +1,19 @@
+name: publish crate
+on:
+  push:
+    branches:
+      - cicd
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: https://github.com/actions-rs/toolchain@v1
+      with:
+          toolchain: stable
+          override: true
+    - uses: https://github.com/katyo/publish-crates@v2
+      with:
+          registry-token: ${{ secrets.CARGO_REGISTRY_TOKEN }}
