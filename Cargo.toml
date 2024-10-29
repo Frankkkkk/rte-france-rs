@@ -2,6 +2,15 @@
 name = "rte-france"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A client for France's RTE API"
+documentation = "https://docs.rs/rte-france"
+homepage = "https://github.com/Frankkkkk/rte-france-rs"
+repository = "https://github.com/Frankkkkk/rte-france-rs"
+keywords = ["RTE", "TSO", "RTE-France"]
+categories = ["api-bindings"]
+
+
 
 [dependencies]
 anyhow = "1.0.91"
